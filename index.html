@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft - حلول ويب ذكية من مصر</title>
+    <meta name="description" content="WebCraft هي شركة تطوير ويب مصرية متخصصة في تقديم حلول رقمية ذكية من القاهرة، مصر.">
+    <meta name="theme-color" content="#ea5a0c">
+    <meta property="og:title" content="WebCraft - حلول ويب ذكية من مصر">
+    <meta property="og:description" content="حلول رقمية ذكية وتطوير ويب احترافي من WebCraft.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=1200&h=630&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar glass-effect">
+        <div class="container">
+            <a href="#home" class="logo" aria-label="WebCraft - الصفحة الرئيسية">
+                <div class="logo-w">W</div>
+                <span class="logo-text">WebCraft</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#pricing">الأسعار</a>
+                <a href="#contact">تواصل معنا</a>
+                <a href="#login">دخول</a>
+                <button class="btn btn-nav" aria-label="ابدأ الآن">Start Now</button>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="قائمة" aria-expanded="false" aria-controls="mobileMenu" type="button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="menu-icon" aria-hidden="true">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" role="navigation">
+            <a href="#home" onclick="toggleMenu()">الرئيسية</a>
+            <a href="#pricing" onclick="toggleMenu()">الأسعار</a>
+            <a href="#contact" onclick="toggleMenu()">تواصل معنا</a>
+            <a href="#login" onclick="toggleMenu()">دخول</a>
+            <button class="btn btn-primary" type="button">Start Now</button>
+        </div>
+    </nav>
+
+    <!-- قسم البطل -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=1920&q=80" alt="القاهرة والأهرامات" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content animate-fade-up">
+                <h1 style="font-size: clamp(3rem, 12vw, 7rem); line-height: 1.1; margin-bottom: 2rem;">
+                    <span style="color: #ea5a0c; font-weight: 900; display: block; text-transform: uppercase; letter-spacing: 3px; filter: drop-shadow(0 0 20px rgba(234, 88, 12, 0.7));">WebCraft</span>
+                </h1>
+                <p style="font-size: 1.2rem; max-width: 600px;">شركة ناشئة متخصصة في تطوير الويب وتقديم حلول رقمية ذكية وعالية الجودة لتطوير أعمالك.</p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" aria-label="أسباب البدء معنا" type="button">Why WebCraft?</button>
+                    <div class="location" aria-label="موقعنا">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>القاهرة، مصر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator animate-float" role="button" aria-label="انقر للانتقال للأسفل" onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})" tabindex="0">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section class="bg-secondary" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>خدماتنا <span class="text-gradient">المتخصصة</span></h2>
+                <p>متخصصون في إنشاء مواقع عرض احترافية وعصرية للمدرسين والأطباء والأعمال بتقنيات حديثة وتصميم متجاوب.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card glass-effect animate-scale-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>مواقع عرض احترافية</h3>
+                    <p>مواقع متخصصة لعرض سيرتك الذاتية والخدمات والإنجازات. مواقع عرض فقط مصممة خصيصاً للمدرسين والأطباء والعاملين بالأعمال.</p>
+                </div>
+
+                <div class="service-card glass-effect animate-scale-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>تصميم عصري ومتجاوب</h3>
+                    <p>تصاميم حديثة وعصرية تعمل بكمال على جميع الأجهزة والشاشات. يتمتع بواجهات سلسة وسهلة الاستخدام.</p>
+                </div>
+
+                <div class="service-card glass-effect animate-scale-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="9" y1="9" x2="15" y2="9"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>تقنيات حديثة</h3>
+                    <p>استخدام أحدث التقنيات: Tailwind CSS للتصميم المتقدم، ShadCN UI للمكونات الاحترافية، و Radix UI لواجهات سلسة وآمنة.</p>
+                </div>
+
+                <div class="service-card glass-effect animate-scale-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>نظام تواصل آلي</h3>
+                    <p>نظام تواصل ذكي بدون الحاجة لبريد إلكتروني. العملاء يتواصلون معك مباشرة عبر الواتساب بكل سهولة وفعالية.</p>
+                </div>
+
+                <div class="service-card glass-effect animate-scale-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2V17zm4 0h-2V7h2V17zm4 0h-2v-4h2V17z"/>
+                        </svg>
+                    </div>
+                    <h3>تلقي الطلبات والحجز</h3>
+                    <p>نظام متقدم لتلقي طلبات العملاء وحجز المواعيد مباشرة عبر الواتساب. إدارة كاملة بدون تعقيدات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأعمال -->
+    <section class="bg-secondary" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>أعمالنا <span class="text-gradient">المميزة</span></h2>
+                <p>نماذج من مشاريعنا الناجحة والمتوافقة مع أحدث معايير التصميم والتطوير.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- مشروع 1 -->
+                <div class="portfolio-card glass-effect animate-scale-in">
+                    <img src="assets/devpedia.png" alt="Devpedia" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3>Devpedia</h3>
+                        <p>منصة تعليمية شاملة لتعلم البرمجة والتطوير مع محتوى عالي الجودة.</p>
+                        <a href="https://sage-creponne-20915e.netlify.app/" target="_blank" class="btn btn-primary portfolio-btn">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- مشروع 2 -->
+                <div class="portfolio-card glass-effect animate-scale-in">
+                    <img src="assets/جيم العمالقه.png" alt="جيم العمالقة" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3>جيم العمالقة</h3>
+                        <p>منصة تدريب رياضية متكاملة توفر برامج تمارين احترافية وتغذية.</p>
+                        <a href="https://tourmaline-semolina-559c7c.netlify.app/" target="_blank" class="btn btn-primary portfolio-btn">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- مشروع 3 -->
+                <div class="portfolio-card glass-effect animate-scale-in">
+                    <img src="assets/شركه العماد.png" alt="شركة العماد" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3>شركة العماد</h3>
+                        <p>موقع شركة متخصصة في الخدمات الاستشارية والمقاولات.</p>
+                        <a href="https://candid-rabanadas-59cc5f.netlify.app/" target="_blank" class="btn btn-primary portfolio-btn">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- مشروع 4 -->
+                <div class="portfolio-card glass-effect animate-scale-in">
+                    <img src="assets/مركز التفوق التعليمى.png" alt="مركز التفوق التعليمي" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3>مركز التفوق التعليمي</h3>
+                        <p>مركز تعليمي يقدم دروساً خصوصية ودورات تدريبية متخصصة.</p>
+                        <a href="https://unrivaled-kleicha-f2a756.netlify.app/" target="_blank" class="btn btn-primary portfolio-btn">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- مشروع 5 -->
+                <div class="portfolio-card glass-effect animate-scale-in">
+                    <img src="assets/مكتبه الرحمه.png" alt="مكتبة الرحمة" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3>مكتبة الرحمة</h3>
+                        <p>مكتبة إلكترونية توفر آلاف الكتب الرقمية والمراجع.</p>
+                        <a href="https://fanciful-pasca-850ccf.netlify.app/" target="_blank" class="btn btn-primary portfolio-btn">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- مشروع 6 -->
+                <div class="portfolio-card glass-effect animate-scale-in">
+                    <img src="assets/نموذج عياده طبيب.png" alt="نموذج عيادة طبيب" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3>نموذج عيادة طبيب</h3>
+                        <p>منصة طبية متقدمة لحجز المواعيد والاستشارات الطبية.</p>
+                        <a href="https://cosmic-longma-458e84.netlify.app/" target="_blank" class="btn btn-primary portfolio-btn">زيارة الموقع</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>لماذا <span class="text-gradient">WebCraft</span>؟</h2>
+                    <p>نحن فريق محترف من مطوري الويب ومصممي واجهات المستخدم المصريين، ملتزمون بتقديم حلول رقمية بمعايير عالمية. نجمع بين فهم عميق للسوق المحلي وتطبيق أحدث المعايير والتقنيات العالمية، مما يمنح عملاءنا ميزة تنافسية حقيقية.</p>
+                    <p>من الشركات الناشئة إلى المؤسسات الكبرى، نساعدك على تحويل حضورك الرقمي باستخدام تقنيات متقدمة وحلول تصميم مبتكرة، تركّز على الأداء، الجاذبية، وتحقيق النتائج.</p>
+
+                    <ul class="features-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>مطورو تطبيقات مصريون محترفون</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>أسعار تنافسية</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>دعم 24/7</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>تسليم في الوقت المعلن</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card glass-effect animate-scale-in">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                        <div class="stat-value" data-target="57">0</div>
+                        <div class="label">عميل راضي</div>
+                    </div>
+
+                    <div class="stat-card glass-effect animate-scale-in">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                        </svg>
+                        <div class="stat-value" data-target="15">0</div>
+                        <div class="label">مشروع منجز</div>
+                    </div>
+
+                    <div class="stat-card glass-effect animate-scale-in">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <div class="stat-value" data-target="2">0</div>
+                        <div class="label">سنوات خبرة</div>
+                    </div>
+
+                    <div class="stat-card glass-effect animate-scale-in">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <div class="stat-value" data-target="99">0<span style="font-size: 1.8rem;">%</span></div>
+                        <div class="label">رضا العملاء</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسعار -->
+    <section class="bg-secondary" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>أسعار <span class="text-gradient">تنافسيه</span></h2>
+                <p>أسعار مميزة تنافسية تضمن لك أفضل قيمة مقابل استثمارك.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card glass-effect animate-scale-in">
+                    <div class="pricing-header">
+                        <h3>الأساسي</h3>
+                        <p class="description">مناسب للافراد والمشاريع الصغيرة</p>
+                        <div class="price">499<span>/المشروع</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            موقع 5 صفحات
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            هاتف مستجيب
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            نموذج اتصال
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            دعم شهر كامل
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline btn-lg" type="button">Get Started</button>
+                </div>
+
+                <div class="pricing-card glass-effect popular animate-scale-in animate-glow">
+                    <div class="pricing-header">
+                        <h3>المحترف</h3>
+                        <p class="description">الأفضل للشركات النامية</p>
+                        <div class="price">999<span>/المشروع</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            موقع 15 صفحة
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            هاتف مستجيب
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            نماذج مخصصة
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            دعم 3 أشهر
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            تكامل التحليلات
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            تكامل وسائل التواصل
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary btn-lg" type="button">Get Started</button>
+                </div>
+
+                <div class="pricing-card glass-effect animate-scale-in">
+                    <div class="pricing-header">
+                        <h3>مؤسسي</h3>
+                        <p class="description">للمؤسسات الكبرى</p>
+                        <div class="price">1499<span>/المشروع</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            صفحات غير محدودة
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            هاتف مستجيب
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            تطوير مخصص
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            دعم 12 شهر
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            دعم أولوية
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline btn-lg" type="button">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>تواصل <span class="text-gradient">معنا</span></h2>
+                <p>هل أنت مستعد لبدء مروتك؟ تواصل معنا اليوم ودعنا نبني شيئًا رائعًا معًا.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card glass-effect">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>بريد إلكتروني</h4>
+                            <p>pemdasproge@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card glass-effect">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>اتصل بنا</h4>
+                            <p>+20-01115636125</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card glass-effect">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>زرنا</h4>
+                            <p>القاهرة، مصر</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form glass-effect" id="contactForm" role="form" aria-label="نموذج الاتصال">
+                    <div class="form-group">
+                        <label for="name">اسمك</label>
+                        <input type="text" id="name" name="name" placeholder="محمد علي" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">رسالتك</label>
+                        <textarea id="message" name="message" placeholder="حدثنا عن فكرتك" required aria-required="true"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg" aria-label="إرسال الرسالة">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                        إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo" aria-label="WebCraft">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" style="color: #ea5a0c;" aria-hidden="true" class="logo-icon">
+                            <path d="M8 12h32M8 24h32M8 36h32M14 12v24M22 12v24M30 12v24M38 12v24" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="logo-text">WebCraft</span>
+                    </a>
+                    <p>حلول ويب ذكية من مصر. بناء التميز الرقمي منذ سنة 2019.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>الشركة</h4>
+                    <a href="#about">عننا</a>
+                    <a href="#services">الخدمات</a>
+                    <a href="#portfolio">محفظة التلف</a>
+                    <a href="#careers">الوظائف</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>الدعم</h4>
+                    <a href="#contact">اتصل بنا</a>
+                    <a href="#faq">أسئلة متكررة</a>
+                    <a href="#privacy">سياسة الخصوصية</a>
+                    <a href="#terms">شروط الخدمة</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="فيسبوك">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="تويتر">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="لينكدان">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="انستجرام">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 WebCraft. جميع الحقوق محفوظة. صنع بحب ❤️ في القاهرة، مصر.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- إشعار Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+        <h4>تم إرسال الرسالة</h4>
+        <p>سنرد عليك الرد بأسرع وقت ممكن.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
