@@ -1359,9 +1359,9 @@ footer {
         margin-bottom: 1.25rem;
     }
 
-    /* Services Grid - 2 columns */
+    /* Services Grid - 1 column */
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     /* About Grid */
@@ -1371,7 +1371,7 @@ footer {
     }
 
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     /* Portfolio Grid */
@@ -1459,12 +1459,12 @@ footer {
     }
 
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 2rem;
     }
 
     .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     /* Logo responsive */
