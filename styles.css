@@ -1570,3 +1570,108 @@ footer {
         gap: 5rem;
     }
 }
+
+/* ==================== About Section Styles ==================== */
+#about {
+    background: linear-gradient(135deg, var(--background) 0%, var(--card) 100%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    background: rgba(234, 88, 12, 0.05);
+    border: 1px solid rgba(234, 88, 12, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(234, 88, 12, 0.1);
+    border-color: rgba(234, 88, 12, 0.3);
+    transform: translateY(-5px);
+}
+
+.feature-item svg {
+    flex-shrink: 0;
+    color: var(--primary);
+    margin-top: 0.5rem;
+}
+
+.feature-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature-item {
+        padding: 1rem;
+    }
+}
+
+/* ==================== Number 5 Animation ==================== */
+@keyframes colorWave {
+    0% {
+        color: #ffffff;
+        text-shadow: 0 0 15px rgba(234, 88, 12, 0.3);
+    }
+    50% {
+        color: #ea5a0c;
+        text-shadow: 0 0 20px rgba(234, 88, 12, 0.8);
+    }
+    100% {
+        color: #ffffff;
+        text-shadow: 0 0 15px rgba(234, 88, 12, 0.3);
+    }
+}
+
+.about-text h3 span {
+    animation: colorWave 2.5s ease-in-out infinite;
+}
